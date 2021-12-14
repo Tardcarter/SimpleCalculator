@@ -17,36 +17,57 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/historyBTN"
+                android:id="@+id/invertButton"
                 style="@style/Widget.AppCompat.Button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="7dp"
                 android:layout_weight="1"
                 android:background="@drawable/circle"
-                android:backgroundTint="@color/brown"
+                android:backgroundTint="@color/grey"
                 android:onClick="historyBTN"
-                android:text="@string/history"
+                android:text="@string/invert"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
             <Button
                 android:id="@+id/button"
-                android:layout_width="wrap_content"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:layout_margin="7dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle"
+                android:backgroundTint="@color/grey"
+                android:text="@string/xsquare"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/button2"
-                android:layout_width="wrap_content"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:layout_margin="7dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle"
+                android:backgroundTint="@color/grey"
+                android:text="@string/xcubed"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/button3"
-                android:layout_width="wrap_content"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:layout_margin="7dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle"
+                android:backgroundTint="@color/grey"
+                android:text="@string/yexponent"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/clearBTN"
@@ -125,21 +146,42 @@
 
             <Button
                 android:id="@+id/button5"
-                android:layout_width="wrap_content"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:layout_margin="7dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle"
+                android:backgroundTint="@color/grey"
+                android:text="@string/squareroot"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/button4"
-                android:layout_width="wrap_content"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:layout_margin="7dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle"
+                android:backgroundTint="@color/grey"
+                android:text="@string/log"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/button6"
-                android:layout_width="wrap_content"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:layout_margin="7dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle"
+                android:backgroundTint="@color/grey"
+                android:text="@string/ln"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/sevenBTN"
@@ -215,21 +257,42 @@
 
             <Button
                 android:id="@+id/button7"
-                android:layout_width="wrap_content"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:layout_margin="7dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle"
+                android:backgroundTint="@color/grey"
+                android:text="@string/sin"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/button8"
-                android:layout_width="wrap_content"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:layout_margin="7dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle"
+                android:backgroundTint="@color/grey"
+                android:text="@string/cos"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/button9"
-                android:layout_width="wrap_content"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:layout_margin="7dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle"
+                android:backgroundTint="@color/grey"
+                android:text="@string/tan"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/fourBTN"
@@ -305,21 +368,42 @@
 
             <Button
                 android:id="@+id/button10"
-                android:layout_width="wrap_content"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:layout_margin="7dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle"
+                android:backgroundTint="@color/grey"
+                android:text="@string/asin"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/button11"
-                android:layout_width="wrap_content"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:layout_margin="7dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle"
+                android:backgroundTint="@color/grey"
+                android:text="@string/acos"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/button12"
-                android:layout_width="wrap_content"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:layout_margin="7dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle"
+                android:backgroundTint="@color/grey"
+                android:text="@string/atan"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/oneBTN"
@@ -360,6 +444,20 @@
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
+            <Button
+                android:id="@+id/historyBTN"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle"
+                android:backgroundTint="@color/brown"
+                android:onClick="historyBTN"
+                android:text="@string/history"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
         </TableRow>
 
         <TableRow
@@ -381,21 +479,42 @@
 
             <Button
                 android:id="@+id/button13"
-                android:layout_width="wrap_content"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:layout_margin="7dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle"
+                android:backgroundTint="@color/grey"
+                android:text="@string/pi"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/button14"
-                android:layout_width="wrap_content"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:layout_margin="7dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle"
+                android:backgroundTint="@color/grey"
+                android:text="@string/ex"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/button15"
-                android:layout_width="wrap_content"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:layout_margin="7dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle"
+                android:backgroundTint="@color/grey"
+                android:text="@string/rad"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/zeroBTN"
@@ -403,7 +522,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="7dp"
-                android:layout_weight="2"
+                android:layout_weight="2.15"
                 android:background="@drawable/circle"
                 android:onClick="zeroBTN"
                 android:text="@string/zero"

@@ -27,19 +27,21 @@
 
     <string name="history">Hist</string>
     <string name="decimal">.</string>
+    <string name="invert">1/x</string>
     <string name="xsquare">x²</string>
-    <string name="ysquare">y²</string>
+    <string name="xcubed">x³</string>
+    <string name="yexponent">y^x</string>
     <string name="squareroot">√</string>
     <string name="log">log</string>
     <string name="ln">ln</string>
     <string name="sin">sin</string>
     <string name="cos">cos</string>
     <string name="tan">tan</string>
-    <string name="arcsin">arcsin</string>
-    <string name="arccos">arccos</string>
-    <string name="arctan">arctan</string>
+    <string name="asin">asin</string>
+    <string name="acos">acos</string>
+    <string name="atan">atan</string>
     <string name="pi">π</string>
-    <string name="e">e²</string>
+    <string name="ex">e^x</string>
     <string name="rad">RAD</string>
 
     <string name="display">Enter Your Calculations</string>
