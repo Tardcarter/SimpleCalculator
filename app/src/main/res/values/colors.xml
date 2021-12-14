@@ -11,6 +11,7 @@
     <color name="pale">#CFD3B8</color>
     <color name="brown">#63565E</color>
     <color name="grey">#838888</color>
+    <color name="greyBackground">#0D0D0D</color>
 
     <color name="colorPrimary">#fff</color>
     <color name="colorPrimaryDark">#9E9E9E</color>

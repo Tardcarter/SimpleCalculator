@@ -4,16 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/greyBackground"
     tools:context=".MainActivity">
 <!--comment test-->
     <EditText
         android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="411dp"
+        android:layout_height="118dp"
         android:layout_marginTop="236dp"
         android:autofillHints="false"
-        android:inputType="none"
+        android:background="@color/pale"
         android:hint="@string/display"
+        android:inputType="none"
         android:textAlignment="textEnd"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"

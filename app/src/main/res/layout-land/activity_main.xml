@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/greyBackground"
     android:layout_height="match_parent">
 
     <TableLayout
@@ -561,10 +562,11 @@
 
     <EditText
         android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="731dp"
+        android:layout_height="71dp"
         android:layout_marginTop="28dp"
         android:autofillHints="false"
+        android:background="@color/pale"
         android:inputType="none"
         android:text="@string/display"
         android:textAlignment="textEnd"
