@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.0">
 
         <EditText
-            android:id="@+id/previousCalculation"
+            android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="0dp"
@@ -53,7 +53,7 @@
             app:layout_constraintBottom_toTopOf="@id/recallABTN"
             app:layout_constraintEnd_toStartOf="@id/button"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/previousCalculation" />
+            app:layout_constraintTop_toBottomOf="@id/textView" />
 
         <Button
             android:id="@+id/button"
@@ -70,7 +70,7 @@
             app:layout_constraintBottom_toTopOf="@id/button5"
             app:layout_constraintEnd_toStartOf="@id/button2"
             app:layout_constraintStart_toEndOf="@id/histButton"
-            app:layout_constraintTop_toBottomOf="@id/previousCalculation" />
+            app:layout_constraintTop_toBottomOf="@id/textView" />
 
         <Button
             android:id="@+id/button2"
@@ -87,7 +87,7 @@
             app:layout_constraintBottom_toTopOf="@id/button4"
             app:layout_constraintEnd_toStartOf="@id/button3"
             app:layout_constraintStart_toEndOf="@id/button"
-            app:layout_constraintTop_toBottomOf="@id/previousCalculation" />
+            app:layout_constraintTop_toBottomOf="@id/textView" />
 
         <Button
             android:id="@+id/button3"
@@ -96,15 +96,15 @@
             android:layout_height="wrap_content"
             android:layout_margin="7dp"
             android:background="@drawable/otherfunction"
-            android:onClick="yFunctionBTN"
-            android:text="@string/yexponent"
+            android:onClick="powerBTN"
+            android:text="@string/power"
             android:textColor="@color/white"
             android:textSize="20sp"
             app:layout_constraintBaseline_toBaselineOf="@id/button2"
             app:layout_constraintBottom_toTopOf="@id/button6"
             app:layout_constraintEnd_toStartOf="@id/clearBTN"
             app:layout_constraintStart_toEndOf="@id/button2"
-            app:layout_constraintTop_toBottomOf="@id/previousCalculation" />
+            app:layout_constraintTop_toBottomOf="@id/textView" />
 
         <Button
             android:id="@+id/clearBTN"
@@ -121,7 +121,7 @@
             app:layout_constraintBottom_toTopOf="@id/sevenBTN"
             app:layout_constraintEnd_toStartOf="@id/negativeBTN"
             app:layout_constraintStart_toEndOf="@id/button3"
-            app:layout_constraintTop_toBottomOf="@id/previousCalculation" />
+            app:layout_constraintTop_toBottomOf="@id/textView" />
 
         <Button
             android:id="@+id/negativeBTN"
@@ -138,7 +138,7 @@
             app:layout_constraintBottom_toTopOf="@id/eightBTN"
             app:layout_constraintEnd_toStartOf="@id/divideBTN"
             app:layout_constraintStart_toEndOf="@+id/clearBTN"
-            app:layout_constraintTop_toBottomOf="@id/previousCalculation" />
+            app:layout_constraintTop_toBottomOf="@id/textView" />
 
         <Button
             android:id="@+id/divideBTN"
@@ -155,7 +155,7 @@
             app:layout_constraintBottom_toTopOf="@id/nineBTN"
             app:layout_constraintEnd_toStartOf="@id/timesBTN"
             app:layout_constraintStart_toEndOf="@id/negativeBTN"
-            app:layout_constraintTop_toBottomOf="@id/previousCalculation" />
+            app:layout_constraintTop_toBottomOf="@id/textView" />
 
         <Button
             android:id="@+id/timesBTN"
@@ -172,7 +172,7 @@
             app:layout_constraintBottom_toTopOf="@id/minusBTN"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/divideBTN"
-            app:layout_constraintTop_toBottomOf="@id/previousCalculation" />
+            app:layout_constraintTop_toBottomOf="@id/textView" />
 
         <Button
             android:id="@+id/recallABTN"

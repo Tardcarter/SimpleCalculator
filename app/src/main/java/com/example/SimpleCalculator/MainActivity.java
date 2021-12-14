@@ -1,15 +1,10 @@
-
 package com.example.SimpleCalculator;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-
-
-
-        import androidx.appcompat.app.AppCompatActivity;
-
-        import org.mariuszgromada.math.mxparser.*;
+import androidx.appcompat.app.AppCompatActivity;
+import org.mariuszgromada.math.mxparser.*;
 
 public class MainActivity extends AppCompatActivity {
 

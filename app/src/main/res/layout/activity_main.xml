@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/previousCalculation"
+        android:id="@+id/textView"
         android:layout_width="409dp"
         android:layout_height="87dp"
         android:layout_marginTop="236dp"
