@@ -3,8 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/GitHub/SimpleCalculator/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3828125" />
+        <entry key="..\:/GitHub/SimpleCalculator/app/src/main/res/drawable/button_background.xml" value="0.3828125" />
         <entry key="..\:/GitHub/SimpleCalculator/app/src/main/res/drawable/circle.xml" value="0.4203125" />
+        <entry key="..\:/GitHub/SimpleCalculator/app/src/main/res/drawable/function.xml" value="0.3828125" />
         <entry key="..\:/GitHub/SimpleCalculator/app/src/main/res/drawable/ic_launcher_background.xml" value="0.4203125" />
+        <entry key="..\:/GitHub/SimpleCalculator/app/src/main/res/drawable/otherfunction.xml" value="0.3828125" />
         <entry key="..\:/GitHub/SimpleCalculator/app/src/main/res/layout-land/activity_main.xml" value="0.51875" />
         <entry key="..\:/GitHub/SimpleCalculator/app/src/main/res/layout/activity_main.xml" value="0.4041666666666667" />
       </map>
