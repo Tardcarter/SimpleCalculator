@@ -175,6 +175,7 @@
                 android:layout_margin="7dp"
                 android:layout_weight="1"
                 android:background="@drawable/otherfunction"
+                android:onClick="lnBTN"
                 android:text="@string/ln"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
