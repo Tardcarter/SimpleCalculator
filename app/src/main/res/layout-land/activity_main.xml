@@ -568,7 +568,7 @@
     <TextView
         android:id="@+id/previousCalculation"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+Ju        android:layout_height="0dp"
         android:background="@color/pale"
         android:textColor="@color/black"
         android:textAlignment="textEnd"
