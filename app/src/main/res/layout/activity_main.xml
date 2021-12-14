@@ -307,6 +307,7 @@
             android:layout_margin="7dp"
             android:layout_marginEnd="7dp"
             android:background="@drawable/otherfunction"
+            android:onClick="storeABTN"
             android:text="@string/storeA"
             android:textColor="@color/white"
             android:textSize="20sp"
@@ -321,12 +322,12 @@
             android:layout_height="wrap_content"
             android:layout_margin="7dp"
             android:background="@drawable/otherfunction"
+            android:onClick="storeBBTN"
             android:text="@string/storeB"
             android:textColor="@color/white"
             android:textSize="20sp"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toEndOf="@+id/storeABTN"
-            tools:layout_editor_absoluteY="365dp" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/recallABTN"
@@ -335,13 +336,13 @@
             android:layout_height="wrap_content"
             android:layout_margin="7dp"
             android:background="@drawable/otherfunction"
+            android:onClick="recallABTN"
             android:text="@string/recallA"
             android:textColor="@color/white"
             android:textSize="20sp"
-            app:layout_constraintTop_toTopOf="parent
-"
             app:layout_constraintStart_toEndOf="@+id/storeBBTN"
-            tools:layout_editor_absoluteY="365dp" />
+            app:layout_constraintTop_toTopOf="parent
+" />
 
         <Button
             android:id="@+id/recallBBTN"
@@ -350,12 +351,12 @@
             android:layout_height="wrap_content"
             android:layout_margin="7dp"
             android:background="@drawable/otherfunction"
+            android:onClick="recallBBTN"
             android:text="@string/recallB"
             android:textColor="@color/white"
             android:textSize="20sp"
             app:layout_constraintStart_toEndOf="@+id/recallABTN"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteY="365dp" />
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
 
