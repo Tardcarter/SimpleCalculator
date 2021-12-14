@@ -115,7 +115,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void historyBTN(View view) {
-        updateText("0");
+        String userExp = display.getText().toString();
+        String result = sp.getString("saved", null);
+        result = result + System.getProperty("line.separator") + userExp + System.getProperty("line.separator");
+        edit.putString("saved",result);
+        edit.apply();
+        updateText(result);
+        display.setSelection(result.length());
     }
 
     public void equalBTN(View view) {
