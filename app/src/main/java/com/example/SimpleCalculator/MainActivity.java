@@ -4,6 +4,11 @@ package com.example.SimpleCalculator;
         import android.os.Bundle;
         import android.view.View;
         import android.widget.EditText;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+
 
         import androidx.appcompat.app.AppCompatActivity;
 
@@ -177,8 +182,8 @@ public class MainActivity extends AppCompatActivity {
         updateText("ln(");
     }
 
-    public void closeBTN(View view){
-        updateText(")");
+    public void radBTN(View view){
+        updateText("Rad");
     }
 
     public void squaredBTN(View view){
@@ -193,8 +198,8 @@ public class MainActivity extends AppCompatActivity {
         updateText("");
     }
 
-    public void openBTN(View view){
-        updateText("(");
+    public void eXBTN(View view){
+        updateText("e^");
     }
 
     public void yFunctionBTN(View view){
