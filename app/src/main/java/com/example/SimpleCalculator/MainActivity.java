@@ -3,6 +3,7 @@ package com.example.SimpleCalculator;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,13 +12,16 @@ import org.mariuszgromada.math.mxparser.*;
 public class MainActivity extends AppCompatActivity {
 
     private EditText display;
+    private TextView previousCalculation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView((R.layout.activity_main));
 
-        display = findViewById(R.id.textView);
+        previousCalculation = findViewById(R.id.previousCalculation);
+        display= findViewById(R.id.textView);
+
         display.setShowSoftInputOnFocus(false);
 
         display.setOnClickListener((new View.OnClickListener() {
@@ -107,12 +111,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void historyBTN(View view) {
-        updateText("0");
+        updateText("");
     }
 
     public void equalBTN(View view) {
         String userExp=display.getText().toString();
 
+        previousCalculation.setText(userExp);
         userExp=userExp.replaceAll("÷","/");
         userExp=userExp.replaceAll("×","*");
 
