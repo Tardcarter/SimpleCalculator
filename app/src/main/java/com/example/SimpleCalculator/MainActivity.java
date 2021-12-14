@@ -1,38 +1,26 @@
+
 package com.example.SimpleCalculator;
 import android.content.SharedPreferences;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.EditText;
-import android.widget.TextView;
 
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import org.mariuszgromada.math.mxparser.*;
 
-import java.util.Objects;
+        import androidx.appcompat.app.AppCompatActivity;
+
+        import org.mariuszgromada.math.mxparser.*;
 
 public class MainActivity extends AppCompatActivity {
 
     private EditText display;
     private SharedPreferences sp;
     private SharedPreferences.Editor edit;
-    private TextView previousCalculation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        Objects.requireNonNull(getSupportActionBar()).hide();
         setContentView((R.layout.activity_main));
-
-        previousCalculation = findViewById(R.id.previousCalculation);
-        display= findViewById(R.id.textView);
-
 
         sp = this.getSharedPreferences("save.dat", MODE_PRIVATE);
         edit = sp.edit();
@@ -129,6 +117,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void historyBTN(View view) {
+        updateText("0");
         String userExp = display.getText().toString();
         String result = sp.getString("saved", null);
         result = result + System.getProperty("line.separator") + userExp + System.getProperty("line.separator");
@@ -136,12 +125,10 @@ public class MainActivity extends AppCompatActivity {
         edit.apply();
         updateText(result);
         display.setSelection(result.length());
-
     }
 
     public void equalBTN(View view) {
         String userExp=display.getText().toString();
-        previousCalculation.setText(userExp);
 
         userExp=userExp.replaceAll("÷","/");
         userExp=userExp.replaceAll("×","*");
@@ -212,12 +199,8 @@ public class MainActivity extends AppCompatActivity {
         updateText("(");
     }
 
-    public void yFunctionBTN(View view){
-        updateText("y^");
-    }
-
-    public void xInverseBTN(View view){
-        updateText("1/x");
+    public void powerBTN(View view){
+        updateText("^");
     }
 
     public void clearBTN(View view) {
