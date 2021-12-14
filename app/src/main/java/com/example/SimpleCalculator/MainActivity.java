@@ -38,14 +38,14 @@ public class MainActivity extends AppCompatActivity {
         String oldStr = display.getText().toString();
         int cursorPos = display.getSelectionStart();
         String leftStr = oldStr.substring(0, cursorPos);
-        String rightStr = oldStr.substring((cursorPos));
+        String rightStr = oldStr.substring(cursorPos);
         if(getString(R.string.display).equals(display.getText().toString())){
             display.setText(strToAdd);
-            display.setSelection(cursorPos+1);
+            display.setSelection(cursorPos + strToAdd.length());
         }
         else{
             display.setText(String.format("%s%s%s", leftStr, strToAdd, rightStr));
-            display.setSelection(cursorPos+1);
+            display.setSelection(cursorPos+ strToAdd.length());
         }
 
     }
@@ -165,24 +165,24 @@ public class MainActivity extends AppCompatActivity {
         updateText("ln(");
     }
 
-    public void radBTN(View view){
-        updateText("Rad");
+    public void closeBTN(View view){
+        updateText(")");
     }
 
     public void squaredBTN(View view){
-        updateText("²");
+        updateText("^2");
     }
 
     public void cubedBTN(View view){
-        updateText("³");
+        updateText("^3");
     }
 
     public void sqrtRootBTN(View view){
         updateText("");
     }
 
-    public void eXBTN(View view){
-        updateText("e^");
+    public void openBTN(View view){
+        updateText("(");
     }
 
     public void yFunctionBTN(View view){

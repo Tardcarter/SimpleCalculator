@@ -37,12 +37,12 @@
     <string name="sin">sin</string>
     <string name="cos">cos</string>
     <string name="tan">tan</string>
-    <string name="asin">asin</string>
-    <string name="acos">acos</string>
-    <string name="atan">atan</string>
+    <string name="asin">asin<sup><small>-1</small></sup></string>
+    <string name="acos">acos<sup><small>-1</small></sup></string>
+    <string name="atan">atan<sup><small>-1</small></sup></string>
     <string name="pi">π</string>
-    <string name="ex">e^x</string>
-    <string name="rad">RAD</string>
+    <string name="openPar">(</string>
+    <string name="closePar">)</string>
 
     <string name="display">Enter Your Calculations</string>
 
