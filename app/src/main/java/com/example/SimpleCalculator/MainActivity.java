@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.EditText;
+import android.widget.TextView;
 
 
 import androidx.annotation.NonNull;
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText display;
     private SharedPreferences sp;
     private SharedPreferences.Editor edit;
+    private TextView previousCalculation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         Objects.requireNonNull(getSupportActionBar()).hide();
         setContentView((R.layout.activity_main));
+
+        previousCalculation = findViewById(R.id.previousCalculation);
+        display= findViewById(R.id.textView);
 
 
         sp = this.getSharedPreferences("save.dat", MODE_PRIVATE);
@@ -124,7 +129,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void historyBTN(View view) {
-        updateText("0");
         String userExp = display.getText().toString();
         String result = sp.getString("saved", null);
         result = result + System.getProperty("line.separator") + userExp + System.getProperty("line.separator");
@@ -132,6 +136,9 @@ public class MainActivity extends AppCompatActivity {
         edit.apply();
         updateText(result);
         display.setSelection(result.length());
+
+        previousCalculation.setText(userExp);
+
     }
 
     public void equalBTN(View view) {
