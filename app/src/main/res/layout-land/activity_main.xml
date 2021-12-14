@@ -550,7 +550,7 @@
     <EditText
         android:id="@+id/textView"
         android:layout_width="731dp"
-        android:layout_height="71dp"
+        android:layout_height="50dp"
         android:layout_marginTop="28dp"
         android:autofillHints="false"
         android:background="@color/pale"
