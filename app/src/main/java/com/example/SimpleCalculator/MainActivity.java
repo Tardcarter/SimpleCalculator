@@ -137,12 +137,11 @@ public class MainActivity extends AppCompatActivity {
         updateText(result);
         display.setSelection(result.length());
 
-        previousCalculation.setText(userExp);
-
     }
 
     public void equalBTN(View view) {
         String userExp=display.getText().toString();
+        previousCalculation.setText(userExp);
 
         userExp=userExp.replaceAll("÷","/");
         userExp=userExp.replaceAll("×","*");
