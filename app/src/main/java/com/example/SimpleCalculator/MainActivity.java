@@ -1,12 +1,9 @@
 package com.example.SimpleCalculator;
 
-import android.content.res.Configuration;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,19 +12,17 @@ import org.mariuszgromada.math.mxparser.*;
 public class MainActivity extends AppCompatActivity {
 
     private EditText display;
-    private TextView previousCalculation;
+    private SharedPreferences sp;
+    private SharedPreferences.Editor edit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        getSupportActionBar().hide();
         setContentView((R.layout.activity_main));
 
-
-        previousCalculation = findViewById(R.id.previousCalculation);
-        display= findViewById(R.id.textView);
-
+        sp = this.getSharedPreferences("save.dat", MODE_PRIVATE);
+        edit = sp.edit();
+        display = findViewById(R.id.textView);
         display.setShowSoftInputOnFocus(false);
 
         display.setOnClickListener((new View.OnClickListener() {
@@ -40,28 +35,21 @@ public class MainActivity extends AppCompatActivity {
         }));
     }
 
-    @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
-        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            getActionBar().hide();
-        } else {
-            getActionBar().show();
-        }
-    }
+    // Allows for saving variable data on the device,
+    // so same variable can be used if app closed and reopened.
 
     private void updateText(String strToAdd) {
         String oldStr = display.getText().toString();
         int cursorPos = display.getSelectionStart();
         String leftStr = oldStr.substring(0, cursorPos);
-        String rightStr = oldStr.substring(cursorPos);
+        String rightStr = oldStr.substring((cursorPos));
         if(getString(R.string.display).equals(display.getText().toString())){
             display.setText(strToAdd);
-            display.setSelection(cursorPos + strToAdd.length());
+            display.setSelection(cursorPos+1);
         }
         else{
             display.setText(String.format("%s%s%s", leftStr, strToAdd, rightStr));
-            display.setSelection(cursorPos+ strToAdd.length());
+            display.setSelection(cursorPos+1);
         }
 
     }
@@ -127,19 +115,26 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void historyBTN(View view) {
-        updateText("");
+        String userExp = display.getText().toString();
+        String result = sp.getString("saved", null);
+        result = result + System.getProperty("line.separator") + userExp + System.getProperty("line.separator");
+        edit.putString("saved",result);
+        edit.apply();
+        updateText(result);
+        display.setSelection(result.length());
     }
 
     public void equalBTN(View view) {
         String userExp=display.getText().toString();
 
-        previousCalculation.setText(userExp);
         userExp=userExp.replaceAll("÷","/");
         userExp=userExp.replaceAll("×","*");
 
         Expression exp = new Expression(userExp);
 
         String result = String.valueOf(exp.calculate());
+        if (result.substring(result.length() - 2, result.length()).equals(".0"))
+            result = result.substring(0, result.length() - 2);
 
         display.setText(result);
         display.setSelection(result.length());
@@ -181,24 +176,24 @@ public class MainActivity extends AppCompatActivity {
         updateText("ln(");
     }
 
-    public void closeBTN(View view){
-        updateText(")");
+    public void radBTN(View view){
+        updateText("Rad");
     }
 
     public void squaredBTN(View view){
-        updateText("^2");
+        updateText("²");
     }
 
     public void cubedBTN(View view){
-        updateText("^3");
+        updateText("³");
     }
 
     public void sqrtRootBTN(View view){
         updateText("");
     }
 
-    public void openBTN(View view){
-        updateText("(");
+    public void eXBTN(View view){
+        updateText("e^");
     }
 
     public void yFunctionBTN(View view){
@@ -218,18 +213,49 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void storeABTN(View view) {
-        updateText("0");
+
+        String userExp=display.getText().toString();
+
+        userExp=userExp.replaceAll("÷","/");
+        userExp=userExp.replaceAll("×","*");
+
+        Expression exp = new Expression(userExp);
+
+        String result = String.valueOf(exp.calculate());
+
+        edit.putString("varA",result);
+        edit.apply();
     }
 
     public void storeBBTN(View view) {
-        updateText("0");
+        String userExp=display.getText().toString();
+
+        userExp=userExp.replaceAll("÷","/");
+        userExp=userExp.replaceAll("×","*");
+
+        Expression exp = new Expression(userExp);
+
+        String result = String.valueOf(exp.calculate());
+
+        edit.putString("varB",result);
+        edit.apply();
+
     }
 
     public void recallABTN(View view) {
-        updateText("0");
+
+        String result = sp.getString("varA", "0");
+        if (result.substring(result.length() - 2, result.length()).equals(".0"))
+            result = result.substring(0, result.length() - 2);
+        updateText(result);
+        display.setSelection(result.length());
     }
 
     public void recallBBTN(View view) {
-        updateText("0");
+        String result = sp.getString("varB", "0");
+        if (result.substring(result.length() - 2, result.length()).equals(".0"))
+            result = result.substring(0, result.length() - 2);
+        updateText(result);
+        display.setSelection(result.length());
     }
 }
