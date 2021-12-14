@@ -30,7 +30,7 @@
     <string name="invert">1/x</string>
     <string name="xsquare">x²</string>
     <string name="xcubed">x³</string>
-    <string name="comma">,</string>
+    <string name="power">^</string>
     <string name="squareroot">√</string>
     <string name="log">log</string>
     <string name="ln">ln</string>

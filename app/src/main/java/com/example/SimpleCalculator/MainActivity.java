@@ -202,8 +202,8 @@ public class MainActivity extends AppCompatActivity {
         updateText("(");
     }
 
-    public void commaBTN(View view){
-        updateText("y^");
+    public void powerBTN(View view){
+        updateText("^");
     }
 
     public void xInverseBTN(View view){
