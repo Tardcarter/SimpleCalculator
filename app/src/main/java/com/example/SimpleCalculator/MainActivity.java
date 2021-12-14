@@ -182,8 +182,8 @@ public class MainActivity extends AppCompatActivity {
         updateText("ln(");
     }
 
-    public void radBTN(View view){
-        updateText("Rad");
+    public void closeBTN(View view){
+        updateText(")");
     }
 
     public void squaredBTN(View view){
@@ -198,11 +198,11 @@ public class MainActivity extends AppCompatActivity {
         updateText("");
     }
 
-    public void eXBTN(View view){
-        updateText("e^");
+    public void openBTN(View view){
+        updateText("(");
     }
 
-    public void yFunctionBTN(View view){
+    public void commaBTN(View view){
         updateText("y^");
     }
 
