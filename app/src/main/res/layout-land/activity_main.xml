@@ -137,7 +137,8 @@
                 android:background="@drawable/otherfunction"
                 android:text="@string/recallA"
                 android:textColor="@color/white"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:onClick="recallABTN"/>
 
             <Button
                 android:id="@+id/button5"
@@ -245,7 +246,8 @@
                 android:background="@drawable/otherfunction"
                 android:text="@string/recallB"
                 android:textColor="@color/white"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:onClick="recallBBTN"/>
 
             <Button
                 android:id="@+id/button7"
@@ -354,7 +356,8 @@
                 android:background="@drawable/otherfunction"
                 android:text="@string/storeA"
                 android:textColor="@color/white"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:onClick="storeABTN"/>
 
             <Button
                 android:id="@+id/button10"
@@ -463,7 +466,8 @@
                 android:background="@drawable/otherfunction"
                 android:text="@string/storeB"
                 android:textColor="@color/white"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:onClick="storeBBTN"/>
 
             <Button
                 android:id="@+id/button13"

@@ -1,5 +1,6 @@
 package com.example.SimpleCalculator;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -11,12 +12,16 @@ import org.mariuszgromada.math.mxparser.*;
 public class MainActivity extends AppCompatActivity {
 
     private EditText display;
+    private SharedPreferences sp;
+    private SharedPreferences.Editor edit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView((R.layout.activity_main));
 
+        sp = this.getSharedPreferences("save.dat", MODE_PRIVATE);
+        edit = sp.edit();
         display = findViewById(R.id.textView);
         display.setShowSoftInputOnFocus(false);
 
@@ -29,6 +34,9 @@ public class MainActivity extends AppCompatActivity {
             }
         }));
     }
+
+    // Allows for saving variable data on the device,
+    // so same variable can be used if app closed and reopened.
 
     private void updateText(String strToAdd) {
         String oldStr = display.getText().toString();
@@ -119,6 +127,8 @@ public class MainActivity extends AppCompatActivity {
         Expression exp = new Expression(userExp);
 
         String result = String.valueOf(exp.calculate());
+        if (result.substring(result.length() - 2, result.length()).equals(".0"))
+            result = result.substring(0, result.length() - 2);
 
         display.setText(result);
         display.setSelection(result.length());
@@ -197,18 +207,49 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void storeABTN(View view) {
-        updateText("0");
+
+        String userExp=display.getText().toString();
+
+        userExp=userExp.replaceAll("÷","/");
+        userExp=userExp.replaceAll("×","*");
+
+        Expression exp = new Expression(userExp);
+
+        String result = String.valueOf(exp.calculate());
+
+        edit.putString("varA",result);
+        edit.apply();
     }
 
     public void storeBBTN(View view) {
-        updateText("0");
+        String userExp=display.getText().toString();
+
+        userExp=userExp.replaceAll("÷","/");
+        userExp=userExp.replaceAll("×","*");
+
+        Expression exp = new Expression(userExp);
+
+        String result = String.valueOf(exp.calculate());
+
+        edit.putString("varB",result);
+        edit.apply();
+
     }
 
     public void recallABTN(View view) {
-        updateText("0");
+
+        String result = sp.getString("varA", "0");
+        if (result.substring(result.length() - 2, result.length()).equals(".0"))
+            result = result.substring(0, result.length() - 2);
+        updateText(result);
+        display.setSelection(result.length());
     }
 
     public void recallBBTN(View view) {
-        updateText("0");
+        String result = sp.getString("varB", "0");
+        if (result.substring(result.length() - 2, result.length()).equals(".0"))
+            result = result.substring(0, result.length() - 2);
+        updateText(result);
+        display.setSelection(result.length());
     }
 }
