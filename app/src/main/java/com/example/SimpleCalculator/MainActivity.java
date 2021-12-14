@@ -1,13 +1,10 @@
 
 package com.example.SimpleCalculator;
-        import android.content.SharedPreferences;
-        import android.os.Bundle;
-        import android.view.View;
-        import android.widget.EditText;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+
 
 
         import androidx.appcompat.app.AppCompatActivity;
@@ -187,15 +184,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void squaredBTN(View view){
-        updateText("²");
+        updateText("^2");
     }
 
     public void cubedBTN(View view){
-        updateText("³");
+        updateText("^3");
     }
 
     public void sqrtRootBTN(View view){
-        updateText("");
+        updateText("√");
     }
 
     public void openBTN(View view){
@@ -204,10 +201,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void powerBTN(View view){
         updateText("^");
-    }
-
-    public void xInverseBTN(View view){
-        updateText("1/x");
     }
 
     public void clearBTN(View view) {
