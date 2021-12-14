@@ -138,6 +138,8 @@
                 android:text="@string/recallA"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
+            android:textSize="20sp"
+            android:onClick="recallABTN"/>
 
             <Button
                 android:id="@+id/button5"
@@ -173,7 +175,6 @@
                 android:layout_margin="7dp"
                 android:layout_weight="1"
                 android:background="@drawable/otherfunction"
-                android:onClick="lnBTN"
                 android:text="@string/ln"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
@@ -247,6 +248,8 @@
                 android:text="@string/recallB"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
+            android:textSize="20sp"
+            android:onClick="recallBBTN"/>
 
             <Button
                 android:id="@+id/button7"
@@ -356,6 +359,8 @@
                 android:text="@string/storeA"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
+            android:textSize="20sp"
+            android:onClick="storeABTN"/>
 
             <Button
                 android:id="@+id/button10"
@@ -465,6 +470,8 @@
                 android:text="@string/storeB"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
+            android:textSize="20sp"
+            android:onClick="storeBBTN"/>
 
             <Button
                 android:id="@+id/button13"
@@ -487,7 +494,7 @@
                 android:layout_margin="7dp"
                 android:layout_weight="1"
                 android:background="@drawable/otherfunction"
-                android:onClick="openBTN"
+                android:onClick="eXBTN"
                 android:text="@string/openPar"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
@@ -500,7 +507,7 @@
                 android:layout_margin="7dp"
                 android:layout_weight="1"
                 android:background="@drawable/otherfunction"
-                android:onClick="closeBTN"
+                android:onClick="radBTN"
                 android:text="@string/closePar"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
@@ -550,8 +557,8 @@
 
     <EditText
         android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_width="731dp"
+        android:layout_height="50dp"
         android:layout_marginTop="28dp"
         android:autofillHints="false"
         android:background="@color/pale"
@@ -564,19 +571,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="LabelFor" />
-
-    <TextView
-        android:id="@+id/previousCalculation"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:background="@color/pale"
-        android:textColor="@color/black"
-        android:textAlignment="textEnd"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
