@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:theme="@android:style/Theme.NoTitleBar"
     android:background="@color/greyBackground"
     tools:context=".MainActivity">
 
@@ -22,15 +23,16 @@
 
         <EditText
             android:id="@+id/textView"
-            android:layout_width="731dp"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="0dp"
             android:autofillHints="false"
             android:background="@color/pale"
             android:inputType="none"
             android:text="@string/display"
             android:textAlignment="textEnd"
             android:textSize="30sp"
+            android:hint="@string/display"
             app:layout_constraintBottom_toTopOf="@id/timesBTN"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
