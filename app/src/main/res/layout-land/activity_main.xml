@@ -40,14 +40,14 @@
             tools:ignore="LabelFor" />
 
         <Button
-            android:id="@+id/invertButton"
+            android:id="@+id/histButton"
             style="@style/Widget.AppCompat.Button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="7dp"
             android:background="@drawable/otherfunction"
-            android:onClick="xInverseBTN"
-            android:text="@string/invert"
+            android:onClick="historyBTN"
+            android:text="@string/history"
             android:textColor="@color/white"
             android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@id/recallABTN"
@@ -66,10 +66,10 @@
             android:text="@string/xsquare"
             android:textColor="@color/white"
             android:textSize="20sp"
-            app:layout_constraintBaseline_toBaselineOf="@id/invertButton"
+            app:layout_constraintBaseline_toBaselineOf="@id/histButton"
             app:layout_constraintBottom_toTopOf="@id/button5"
             app:layout_constraintEnd_toStartOf="@id/button2"
-            app:layout_constraintStart_toEndOf="@id/invertButton"
+            app:layout_constraintStart_toEndOf="@id/histButton"
             app:layout_constraintTop_toBottomOf="@id/previousCalculation" />
 
         <Button
@@ -188,7 +188,7 @@
             app:layout_constraintBottom_toTopOf="@id/recallBBTN"
             app:layout_constraintEnd_toStartOf="@id/button5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/invertButton" />
+            app:layout_constraintTop_toBottomOf="@id/histButton" />
 
         <Button
             android:id="@+id/button5"
