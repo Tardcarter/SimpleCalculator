@@ -1,7 +1,10 @@
 package com.example.SimpleCalculator;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -17,7 +20,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportActionBar().hide();
         setContentView((R.layout.activity_main));
+
 
         previousCalculation = findViewById(R.id.previousCalculation);
         display= findViewById(R.id.textView);
@@ -32,6 +38,16 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }));
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            getActionBar().hide();
+        } else {
+            getActionBar().show();
+        }
     }
 
     private void updateText(String strToAdd) {
