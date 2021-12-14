@@ -7,10 +7,11 @@
     android:background="@color/greyBackground"
     tools:context=".MainActivity">
 <!--comment test-->
+
     <EditText
         android:id="@+id/textView"
-        android:layout_width="411dp"
-        android:layout_height="118dp"
+        android:layout_width="414dp"
+        android:layout_height="104dp"
         android:layout_marginTop="236dp"
         android:autofillHints="false"
         android:background="@color/pale"
@@ -20,9 +21,10 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="LabelFor" />
 
     <androidx.constraintlayout.widget.ConstraintLayout

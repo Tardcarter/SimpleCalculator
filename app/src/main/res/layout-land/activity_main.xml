@@ -26,7 +26,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/circle"
                 android:backgroundTint="@color/grey"
-                android:onClick="historyBTN"
+                android:onClick="xInverseBTN"
                 android:text="@string/invert"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
@@ -40,6 +40,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/circle"
                 android:backgroundTint="@color/grey"
+                android:onClick="squaredBTN"
                 android:text="@string/xsquare"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
@@ -53,6 +54,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/circle"
                 android:backgroundTint="@color/grey"
+                android:onClick="cubedBTN"
                 android:text="@string/xcubed"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
@@ -66,6 +68,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/circle"
                 android:backgroundTint="@color/grey"
+                android:onClick="yFunctionBTN"
                 android:text="@string/yexponent"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
@@ -154,6 +157,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/circle"
                 android:backgroundTint="@color/grey"
+                android:onClick="sqrtRootBTN"
                 android:text="@string/squareroot"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
@@ -167,6 +171,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/circle"
                 android:backgroundTint="@color/grey"
+                android:onClick="logBTN"
                 android:text="@string/log"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
@@ -265,6 +270,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/circle"
                 android:backgroundTint="@color/grey"
+                android:onClick="sinBTN"
                 android:text="@string/sin"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
@@ -278,6 +284,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/circle"
                 android:backgroundTint="@color/grey"
+                android:onClick="cosBTN"
                 android:text="@string/cos"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
@@ -291,6 +298,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/circle"
                 android:backgroundTint="@color/grey"
+                android:onClick="tanBTN"
                 android:text="@string/tan"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
@@ -376,6 +384,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/circle"
                 android:backgroundTint="@color/grey"
+                android:onClick="asinBTN"
                 android:text="@string/asin"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
@@ -389,6 +398,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/circle"
                 android:backgroundTint="@color/grey"
+                android:onClick="acosBTN"
                 android:text="@string/acos"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
@@ -402,6 +412,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/circle"
                 android:backgroundTint="@color/grey"
+                android:onClick="atanBTN"
                 android:text="@string/atan"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
@@ -487,6 +498,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/circle"
                 android:backgroundTint="@color/grey"
+                android:onClick="piBTN"
                 android:text="@string/pi"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
@@ -500,6 +512,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/circle"
                 android:backgroundTint="@color/grey"
+                android:onClick="eXBTN"
                 android:text="@string/ex"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
@@ -513,6 +526,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/circle"
                 android:backgroundTint="@color/grey"
+                android:onClick="radBTN"
                 android:text="@string/rad"
                 android:textColor="@color/white"
                 android:textSize="20sp" />

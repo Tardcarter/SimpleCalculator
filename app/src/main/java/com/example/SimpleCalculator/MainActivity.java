@@ -124,6 +124,69 @@ public class MainActivity extends AppCompatActivity {
         display.setSelection(result.length());
 
     }
+    public void logBTN(View view){
+        updateText("log(");
+    }
+
+    public void sinBTN(View view){
+        updateText("sin(");
+    }
+
+    public void cosBTN(View view){
+        updateText("cos(");
+    }
+
+    public void tanBTN(View view){
+        updateText("tan(");
+    }
+
+    public void asinBTN(View view){
+        updateText("arcsin(");
+    }
+
+    public void acosBTN(View view){
+        updateText("arccos(");
+    }
+
+    public void atanBTN(View view){
+        updateText("atan(");
+    }
+
+    public void piBTN(View view){
+        updateText("3.14");
+    }
+
+    public void lnBTN(View view){
+        updateText("ln(");
+    }
+
+    public void radBTN(View view){
+        updateText("Rad");
+    }
+
+    public void squaredBTN(View view){
+        updateText("²");
+    }
+
+    public void cubedBTN(View view){
+        updateText("³");
+    }
+
+    public void sqrtRootBTN(View view){
+        updateText("");
+    }
+
+    public void eXBTN(View view){
+        updateText("e^");
+    }
+
+    public void yFunctionBTN(View view){
+        updateText("y^");
+    }
+
+    public void xInverseBTN(View view){
+        updateText("1/x");
+    }
 
     public void clearBTN(View view) {
         display.setText("");
