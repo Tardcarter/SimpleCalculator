@@ -1,7 +1,9 @@
 package com.example.SimpleCalculator;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 import org.mariuszgromada.math.mxparser.*;
@@ -11,11 +13,20 @@ public class MainActivity extends AppCompatActivity {
     private EditText display;
     private SharedPreferences sp;
     private SharedPreferences.Editor edit;
+    private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView((R.layout.activity_main));
+
+        button=(Button) findViewById(R.id.colorBTN);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openActivity2();
+            }
+        });
 
         sp = this.getSharedPreferences("save.dat", MODE_PRIVATE);
         edit = sp.edit();
@@ -30,10 +41,16 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }));
+
     }
 
     // Allows for saving variable data on the device,
     // so same variable can be used if app closed and reopened.
+    public void openActivity2(){
+        Intent intent = new Intent(this, Activity2.class);
+        startActivity(intent);
+
+    }
 
     private void updateText(String strToAdd) {
         String oldStr = display.getText().toString();

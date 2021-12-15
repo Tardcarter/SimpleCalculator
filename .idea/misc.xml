@@ -10,9 +10,11 @@
         <entry key="..\:/GitHub/SimpleCalculator/app/src/main/res/drawable/ic_launcher_background.xml" value="0.4203125" />
         <entry key="..\:/GitHub/SimpleCalculator/app/src/main/res/drawable/otherfunction.xml" value="0.3828125" />
         <entry key="..\:/GitHub/SimpleCalculator/app/src/main/res/layout-land/activity_main.xml" value="0.4" />
+        <entry key="..\:/GitHub/SimpleCalculator/app/src/main/res/layout/activity_2.xml" value="0.36666666666666664" />
         <entry key="..\:/GitHub/SimpleCalculator/app/src/main/res/layout/activity_main.xml" value="0.4041666666666667" />
         <entry key="..\:/GitHub/SimpleCalculator/app/src/main/res/layout/fragment_color_set.xml" value="0.36666666666666664" />
         <entry key="..\:/GitHub/SimpleCalculator/app/src/main/res/layout/nav_graph.xml" value="0.36666666666666664" />
+        <entry key="..\:/GitHub/SimpleCalculator/app/src/main/res/xml/root_preferences.xml" value="0.264" />
       </map>
     </option>
   </component>
