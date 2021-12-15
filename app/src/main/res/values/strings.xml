@@ -44,6 +44,9 @@
     <string name="openPar">(</string>
     <string name="closePar">)</string>
 
+    <string name="calcBtn">Calc</string>
+    <string name="colorBtn">Switch Colors</string>
+
     <string name="display">Enter Your Calculations</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

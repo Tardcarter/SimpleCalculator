@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+
 import org.mariuszgromada.math.mxparser.*;
 
 public class MainActivity extends AppCompatActivity {
@@ -14,11 +16,18 @@ public class MainActivity extends AppCompatActivity {
     private SharedPreferences sp;
     private SharedPreferences.Editor edit;
     private Button button;
+    private Boolean altColor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView((R.layout.activity_main));
+
+        sp = this.getSharedPreferences("save.dat", MODE_PRIVATE);
+        edit = sp.edit();
+        altColor = sp.getBoolean("altcolor",false);
+
+        if(altColor) AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
 
         button=(Button) findViewById(R.id.colorBTN);
         button.setOnClickListener(new View.OnClickListener() {
@@ -28,8 +37,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        sp = this.getSharedPreferences("save.dat", MODE_PRIVATE);
-        edit = sp.edit();
+
         display = findViewById(R.id.textView);
         display.setShowSoftInputOnFocus(false);
 

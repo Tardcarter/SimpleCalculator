@@ -13,4 +13,12 @@
         android:text="Calc"
         tools:layout_editor_absoluteX="114dp"
         tools:layout_editor_absoluteY="118dp" />
+
+    <Button
+        android:id="@+id/colorBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/colorBtn"
+        tools:layout_editor_absoluteX="114dp"
+        tools:layout_editor_absoluteY="236dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
